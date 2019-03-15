@@ -1,9 +1,20 @@
 package code;
 
-
+/**
+ * @author Javier
+ * @version 1.0
+ * 
+ * Clase MinimoComunMultiplo en la cual se calcula cual es el primer multiplo comun entre los numeros pasados
+ */
 public class MinimoComunMultiplo {
+	/**
+	 * Constructor minimoComunMultiplo al que no se le pasan parametros
+	 */
   public MinimoComunMultiplo() {}
-
+/**
+ * @param args Son los argumentos enteros que se le pasan antes de iniciar el programa
+ * @return Devuelve el valor de la variable d
+ */
   public int candidatosMcM(int[] args) {
     if (args.length < 2) {
       throw new IllegalArgumentException(
@@ -30,7 +41,11 @@ public class MinimoComunMultiplo {
       d += max;
     }
   }
-
+/**
+ * Metodo que calcula si uno de los dos numeros introducidos es 0
+ * @param ints Se le pasa como parametro un array de enteros
+ * @return Devuelve verdader si uno de los dos numeros es 0 y falso si no es 0
+ */
   private boolean algunoEsCero(int[] ints) {
     for (int d : ints) {
       if (d == 0) {
@@ -40,7 +55,10 @@ public class MinimoComunMultiplo {
 
     return false;
   }
-
+/**
+ * @param ints Se le pasa como parametro un array de enteros el cual determinara el tamaño del array abs
+ * @return Nos devuelve el valor absoluto de cada uno de los numeros del array
+ */
   private static int[] abs(int[] ints) {
     int[] abs = new int[ints.length];
 
@@ -51,7 +69,10 @@ public class MinimoComunMultiplo {
     return abs;
   }
   
-
+/**
+ * @param ints Se le pasa como parametro un array de enteros
+ * @return Devuelve el valor maximo
+ */
   private int max(int[] ints) {
     int max = ints[0];
 
@@ -62,7 +83,11 @@ public class MinimoComunMultiplo {
     return max;
   }
   
-
+/**
+ * @param d Se le pasa el parametro de tipo entero d el cual es el numero que sera dividido por todos los numeros del array para calcular el resto
+ * @param ints Se le pasa como parametro un array de numeros enteros
+ * @return Devuelve un valor booleano 
+ */
   private boolean esMinimoComunMultiplo(int d, int[] ints) {
     for (int i = 0; i < ints.length; i += 1) {
       if (d % ints[i] != 0) {
