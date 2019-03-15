@@ -21,7 +21,7 @@ public class MinimoComunMultiploTest {
 	@Test
 	public void testSuma() {
 		System.out.println("Probando la Suma: ");
-		int resultado = MCM.candidatosMcM()
+		int resultado = MCM.candidatosMcM();
 		assertEquals(9, resultado);
 	}
 

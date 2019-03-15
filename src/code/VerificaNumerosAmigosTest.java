@@ -19,7 +19,7 @@ public class VerificaNumerosAmigosTest {
 	
 	@Test
 	public void testSuma() {
-		System.out.println("Probando la Suma: ");
+		System.out.println("Probando Verificacion: ");
 		boolean resultado = VNA.comprobarSiAmigos(220, 284);
 		assertEquals(true, resultado);
 
